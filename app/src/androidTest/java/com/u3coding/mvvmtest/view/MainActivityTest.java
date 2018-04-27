@@ -1,9 +1,11 @@
-package com.u3coding.mvvmtest;
+package com.u3coding.mvvmtest.view;
 
 
+import android.support.test.espresso.matcher.ViewMatchers;
 import android.support.test.rule.ActivityTestRule;
 import android.support.test.runner.AndroidJUnit4;
 
+import com.u3coding.mvvmtest.R;
 import com.u3coding.mvvmtest.view.MainActivity;
 
 import org.junit.Rule;
@@ -21,7 +23,7 @@ public class MainActivityTest {
     public ActivityTestRule<MainActivity> mActivityRule = new ActivityTestRule(MainActivity.class);
     @Test
     public void checkButtonIsShow(){
-        onView(withId(R.id.fab)).check(matches(isDisplayed()));
+        onView(ViewMatchers.withId(R.id.fab)).check(matches(isDisplayed()));
     }
 
 }
